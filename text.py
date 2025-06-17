@@ -1,0 +1,6 @@
+text = input("Give me the text:")
+a = text.upper()
+b = text.capitalize()
+c = text.split()
+len(text)
+print(f"{a}\n{b}\n{c}")
