@@ -1,5 +1,5 @@
-text = "How are you" 
-#text = input("Give me the text:")
+#text = "How are you" 
+text = input("Give me the text: ")
 
 #Print the sentence in uppercase and lowercase.
 a = text.upper()
