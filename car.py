@@ -1,53 +1,122 @@
-import time
-import random
+import car
+from defcar import car
+#audi: car = car(brand= "Audi" ,color= "Blue",maxspeed= 250)
+audi = car(brand= "Audi" ,color= "Blue",maxspeed= 250)
+bmw = car(brand= "Bmw", color= "Black" , maxspeed= 300)
+lambo = car(brand= "Lamborghini" ,color="Green", maxspeed= 350)
+ferrari = car(brand= "Ferrari",color= "Yellow", maxspeed= 400)
+"""
+while True:
+    first(x)
+    match x:
+        case 1 :
+            second(y)
+            match y:
+                case 1:
+                    audi.warm()
+                case 2:
+                    audi.run()
+                case 3:
+                    audi.stop()
+                case 4:
+                    print("Going back to the Main menu")
+"""
+while True:
+    try:
+        x = int(input("\nWhich car do you want\n0.Exiting the code\n1.Audi\n2.Bmw\n3.Lambo\n4.Ferrari\nYour choic: "))
+    except ValueError:
+        print("ValueError: Please enter numbers only, no letters!")
+        continue
+    match x:
+        case 0 : 
+            print("Exiting the code...")
+            break
+        case 1 :
+            while True:
+                try:
+                    y = int(input("\nGive the Condition of the car Audi\n1.warmup\n2.run the car\n3.stop\n4.Take a difirent car\nYour choic: "))
+                except ValueError:
+                    print("ValueError: Please enter numbers only, no letters!")
+                    continue
+                match y:
+                    case 1:
+                        audi.warm()
+                    case 2:
+                        audi.run()
+                    case 3:
+                        audi.stop()
+                    case 4:
+                        audi.exet()
+                        if audi.exitt == True:
+                            exit
+                        else:
+                            continue
 
-class auto:
-    def __init__(self,brand,color,maxspeed):
-        self.brand = brand
-        self.color = color
-        self.maxspeed = maxspeed
-        self.warmup = False
-        self.carrun = False
-        self.carstop = False
-            
-    def warm(self):
-        if self.warmup == True:
-            print(f"The car {self.brand} has already warmed up ")
-            return self
-        else:
-            print(f"The car {self.brand} need to warmup it will take a while,")
-            x = random.randint(5,10)
-            time.sleep(x)
-            self.warmup = True
-            print(f"The car {self.brand} has warmed up")
-            return self
-    
-    def run(self):
-        if self.warmup == True:
-            print(f"The car {self.brand} is started and it will take a while to go to maxspeed")
-            x = random.randint(10,30)
-            time.sleep(x)
-            print(f"The car {self.brand} are on the max car speed of {self.maxspeed}")
-            self.carrun = True
-            return self
-        else:
-            print(f"The car {self.brand} has to warm up please use warm")
-            return self
-        
-    def stop(self):
-        if self.carrun == True:
-            print(f"The car {self.brand} is now stopping and will take some time")
-            x = random.randint(3,7)
-            time.sleep(x)
-            print(f"The car {self.brand} has stopped")
-            self.carstop = True
-            return self
-        else:
-            print(f"The car {self.brand} has to start")
-            return self
-
-
-audi = auto(brand= "Audi" ,color= "Blue",maxspeed= 150)
-print(audi.brand,audi.color,audi.maxspeed) 
-audi.warm().run().stop()
-
+                    case _:
+                        print("Pleas choic the nummbers betwin 1-4")
+        case 2 :
+            while True:
+                try:
+                    y = int(input("\nGive the Condition of the car Bmw\n1.warmup\n2.run the car\n3.stop\n4.Take a difirent car\nYour choic: "))
+                except ValueError:
+                    print("ValueError: Please enter numbers only, no letters!")
+                    continue
+                match y:
+                    case 1:
+                        bmw.warm()
+                    case 2:
+                        bmw.run()
+                    case 3:
+                        bmw.stop()
+                    case 4:
+                        bmw.exet()
+                        if bmw.exitt == True:
+                            exit
+                        else:
+                            continue
+                    case _:
+                        print("Pleas choic the nummbers betwin 1-4")
+        case 3 :
+            while True:
+                try:
+                    y = int(input("\nGive the Condition of the car Lamborghini\n1.warmup\n2.run the car\n3.stop\n4.Take a difirent car\nYour choic: "))
+                except ValueError:
+                    print("ValueError: Please enter numbers only, no letters!")
+                    continue
+                match y:
+                    case 1:
+                        lambo.warm()
+                    case 2:
+                        lambo.run()
+                    case 3:
+                        lambo.stop()
+                    case 4:
+                        lambo.exet()
+                        if bmw.exitt == True:
+                            exit
+                        else:
+                            continue
+                    case _:
+                        print("Pleas choic the nummbers betwin 1-4")
+        case 4 :
+            while True:
+                try:
+                    y = int(input("\nGive the Condition of the car Ferrari\n1.warmup\n2.run the car\n3.stop\n4.Take a difirent car\nYour choic: "))
+                except ValueError:
+                    print("ValueError: Please enter numbers only, no letters!")
+                    continue
+                match y:
+                    case 1:
+                        ferrari.warm()
+                    case 2:
+                        ferrari.run()
+                    case 3:
+                        ferrari.stop()
+                    case 4:
+                        ferrari.exet()
+                        if ferrari.exitt == True:
+                            exit
+                        else:
+                            continue
+                    case _:
+                        print("Pleas choic the nummbers betwin 1-4")
