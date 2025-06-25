@@ -30,7 +30,7 @@ while True:
     match x:
         case 0 : 
             print("Exiting the code...")
-            break
+            exit()
         case 1 :
             while True:
                 try:
@@ -48,7 +48,7 @@ while True:
                     case 4:
                         audi.exet()
                         if audi.exitt == True:
-                            exit
+                            break
                         else:
                             continue
 
@@ -71,7 +71,7 @@ while True:
                     case 4:
                         bmw.exet()
                         if bmw.exitt == True:
-                            exit
+                            break
                         else:
                             continue
                     case _:
@@ -92,8 +92,8 @@ while True:
                         lambo.stop()
                     case 4:
                         lambo.exet()
-                        if bmw.exitt == True:
-                            exit
+                        if lambo.exitt == True:
+                            break
                         else:
                             continue
                     case _:
@@ -115,7 +115,7 @@ while True:
                     case 4:
                         ferrari.exet()
                         if ferrari.exitt == True:
-                            exit
+                            break
                         else:
                             continue
                     case _:
