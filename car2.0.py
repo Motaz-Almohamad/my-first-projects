@@ -34,18 +34,20 @@ while True:
     if 1 <= x <= 4:
         while True:
                 try:
-                    y = int(input(f"\nGive the Condition of the car {choice.brand}\n1.warmup\n2.run the car\n3.stop\n4.Take a difirent car\nYour choic: "))
+                    y = int(input(f"\nGive the Condition of the car {choice.brand}\n1.fillup\n2.warmup\n3.run the car\n4.stop\n5.Take a difirent car\nYour choic: "))
                 except ValueError:
                     print("ValueError: Please enter numbers only, no letters!")
                     continue
                 match y:
                     case 1:
-                        choice.warm()
+                        choice.fillup()
                     case 2:
-                        choice.run()
+                        choice.warm()
                     case 3:
-                        choice.stop()
+                        choice.run()
                     case 4:
+                        choice.stop()
+                    case 5:
                         choice.exet()
                         if choice.exitt == True:
                             break
